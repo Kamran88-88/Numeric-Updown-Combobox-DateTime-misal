@@ -53,16 +53,16 @@ namespace WindowsFormsApp7
 
             var SearchedPr = list.SingleOrDefault(x => x.Name == comboBox1.Text);
 
-            if (Convert.ToInt32(numericUpDown1.Text) > SearchedPr.Count)
-            {
-                MessageBox.Show("tor");
-            }
-            //if (numericUpDown1.Value <= SearchedPr.Count)
+            //if (Convert.ToInt32(numericUpDown1.Text) > SearchedPr.Count)
             //{
-            //SearchedPr.Count -= Convert.ToInt32(numericUpDown1.Value);
-            //comboBox1.Text = "";
-            //numericUpDown1.Value = 0;
-            // }
+            //    MessageBox.Show("tor");
+            //}
+            if (numericUpDown1.Value <= SearchedPr.Count)
+            {
+                SearchedPr.Count -= Convert.ToInt32(numericUpDown1.Value);
+                comboBox1.Text = "";
+                numericUpDown1.Value = 0;
+            }
         }
     }
 
